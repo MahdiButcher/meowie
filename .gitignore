@@ -1,0 +1,19 @@
+# Environment variables
+.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Telethon session files
+*.session
+*.session-journal
+
+# Environments
+venv/
+.venv/
+env/
+ENV/
