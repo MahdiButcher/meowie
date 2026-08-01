@@ -1,12 +1,13 @@
 # Meowie 🐾
 
-A simple Telegram Bot project built using [Telethon](https://github.com/LonamiWebs/Telethon) in Python with Docker support and persistent storage for sessions and SQLite database.
+A simple Telegram Bot project built using [Telethon](https://github.com/LonamiWebs/Telethon) in Python with Docker support, persistent storage for sessions/SQLite database, and a local interactive CLI session generator script.
 
 ## Features
 - `/start` - Greets user & logs user details into SQLite database.
 - `/ping` - Responds with `Pong! 🐱`
 - Echoes incoming non-command text messages.
 - Docker & Docker Compose setup with persistent volume for Telethon session and database files.
+- `generate_session.py` - Local terminal CLI helper to safely authenticate user client sessions.
 
 ## Prerequisites
 - Python 3.8+ (or Docker & Docker Compose)
@@ -20,6 +21,17 @@ A simple Telegram Bot project built using [Telethon](https://github.com/LonamiWe
    cp .env.example .env
    ```
 2. Fill in `API_ID`, `API_HASH`, and `BOT_TOKEN` in `.env`.
+
+---
+
+## Safe Local Session Generator
+
+To generate a Telethon `StringSession` for userbot automation safely in your local terminal:
+
+```bash
+python generate_session.py
+```
+*(Interactive prompts will safely accept phone numbers, OTPs, and 2FA passwords directly inside your local console without exposing credentials to any third-party bot or server).*
 
 ---
 
