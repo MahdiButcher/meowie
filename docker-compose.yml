@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  meowie-bot:
+    build: .
+    container_name: meowie_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Persistent volume for Telethon session files and SQLite database
+      - meowie_data:/app/data
+
+volumes:
+  meowie_data:
+    driver: local

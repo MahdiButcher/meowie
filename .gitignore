@@ -1,6 +1,9 @@
 # Environment variables
 .env
 
+# Persistent storage directory
+data/
+
 # Python artifacts
 __pycache__/
 *.py[cod]
